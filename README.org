@@ -1,10 +1,10 @@
 * Spring 2022 - Lab 05
 
-* Last name:
+* Last name: Veselinov
 
-* First name:
+* First name: Emmy
 
-* GitHub username:
+* GitHub username: emmyvese12
 
 * Notes:
 
@@ -40,6 +40,4 @@ For reference, the doctest package and documentation can be found
 *Note:* Remember that your program (including tests) should not ask
  for any keyboard input. When run it should clearly show that all
  tasks are implemented and work.
-
-
 

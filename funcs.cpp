@@ -27,7 +27,7 @@ bool isPrime(int n){
         if (i == 2){
         break;
         }
-        if (n != 2 && n % 2 == 0 || n % (i-1) == 0){
+        if (n != 2 && n % 2 == 0 || n % (i-1) == 0){ //if these conditions are met, the number is NOT a prime number 
             count += 1;
         }
     }

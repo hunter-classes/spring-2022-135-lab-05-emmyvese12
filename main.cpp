@@ -24,5 +24,22 @@ int main(){
   std::cout << result2pr;
   std::cout << " == true\n";
 
+  std::cout << "\n============Task C: next prime============" << std::endl;
+  std::cout << "nextPrime(14)" << std::endl;
+  int result1np = nextPrime(14);
+  std::cout << result1np << std::endl;
+  std::cout << "nextPrime(17)" << std::endl;
+  int result2np = nextPrime(17);
+  std::cout << result2np << std::endl;
+
+  std::cout << "\n============Task D: count primes============" << std::endl;
+  std::cout << "countPrimes(1,5)" << std::endl;
+  int result1cp = countPrimes(1,5);
+  std::cout << result1cp << std::endl;
+  std::cout << "countPrimes(19,42)" <<std::endl;
+  int result2cp = countPrimes(19,42);
+  std::cout << result2cp << std::endl;
+
+
   return 0;
 }

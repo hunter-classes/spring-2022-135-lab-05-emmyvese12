@@ -169,6 +169,7 @@ int countPrimes(int a, int b){
 
 
 // task E
+
 bool isTwinPrime(int n){
     //first check if it's a prime number
     bool checkPrime;
@@ -203,6 +204,7 @@ return result;
 
 
 // task F
+
 int nextTwinPrime(int n){
     bool isitTwinPrime = false;
 
@@ -218,4 +220,39 @@ int nextTwinPrime(int n){
     while (isitTwinPrime == false);
 
     return n;
+}
+
+
+//task G
+
+int largestTwinPrime(int a, int b){
+    int twinPrimeHolder = 0;
+    bool isitTwinPrime;
+    bool checkNewTwin;
+
+    //check if a is a twin prime, if true, twinPrimeHolder will hold the value of a
+    isitTwinPrime = isTwinPrime(a);
+
+    if (isitTwinPrime == true){
+        twinPrimeHolder = a;
+    }
+
+    do {
+        checkNewTwin = false; //reset the variable each time
+        a = a + 1;
+
+        checkNewTwin = isTwinPrime(a);
+
+        if (checkNewTwin == true){
+            twinPrimeHolder = a;
+        }
+
+    }
+    while (a != b);
+
+    if (twinPrimeHolder == 0){ //if there are no twin primes in the range, return -1
+        twinPrimeHolder = -1;
+    }
+
+return twinPrimeHolder;
 }

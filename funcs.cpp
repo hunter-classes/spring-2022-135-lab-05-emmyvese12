@@ -22,10 +22,14 @@ bool isPrime(int n){
     // n is NOT a prime number if it IS divisible evenley (==0) by any of the numbers from 2 to n-1
     bool resultPrime;
     int count = 0;
-    
+
     for (int i = n; i <= n; i--){
+        if (n < 0){ //if n is negative
+            count += 1;
+            break;
+        }
         if (i == 2){
-        break;
+            break;
         }
         if (n == 1 || n == 0){ // if 0 or 1 was to be passed to the next if statement, the modulo of 0 from (n-1) would be undefined and crash the program
             count += 1; 
@@ -54,9 +58,14 @@ int nextPrime(int n){
     
     do {
         countTest = 0;
+        if (n < 0){ //if n is negative
+            n = 0; //start at 0 b/c all prime nums are positive
+        }
+
         n = n + 1; //add 1 to test the next number
 
         for (int i = n; i <= n; i--){
+            
         if (i == 2){
             break;
         }
@@ -92,6 +101,11 @@ int countPrimes(int a, int b){
     bool checkPrime = false;
     int countInitial = 0;
     int primeRangeCount = 0;
+
+    //account for neg numbers
+    if (a < 0){
+        a = 0; //start at 0
+    }
 
     // check if the first num is a prime number
 
@@ -152,5 +166,35 @@ int countPrimes(int a, int b){
     return primeRangeCount;
 }
 
-
 // task E
+bool isTwinPrime(int n){
+    //first check if it's a prime number
+    bool checkPrime;
+    int plus2Num;
+    int minus2Num;
+    bool result;
+
+    if (isPrime(n) == true){
+        checkPrime = true;
+    }
+    else {
+        checkPrime = false;
+    }
+
+    if (checkPrime == true){ //if n is a prime number..
+        plus2Num = n + 2;
+        minus2Num = n - 2;
+
+        if (isPrime(plus2Num) == true || isPrime(minus2Num) == true){
+            result = true;
+        }
+        else {
+            result = false;
+        }
+    }
+
+    else if (checkPrime == false){ //not a prime num so it can't be a twin prime
+        result = false;
+    }
+return result;
+}

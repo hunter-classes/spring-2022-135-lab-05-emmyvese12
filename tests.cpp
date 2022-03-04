@@ -47,6 +47,13 @@ TEST_CASE("Large Prime Numbers"){
     CHECK(isPrime(142) == false);
 }
 
+TEST_CASE("Negative Numbers"){
+    CHECK(isPrime(-1) == false);
+    CHECK(isPrime(-5) == false);
+    CHECK(isPrime(-9) == false);
+}
+
+
 //task C
 TEST_CASE("Prime Numbers"){
     CHECK(nextPrime(2) == 3);
@@ -60,6 +67,12 @@ TEST_CASE("Non-prime Numbers"){
     CHECK(nextPrime(6) == 7);
     CHECK(nextPrime(15) == 17);
     CHECK(nextPrime(27) == 29);
+}
+
+TEST_CASE("Negative Numbers"){
+    CHECK(nextPrime(-1) == 2);
+    CHECK(nextPrime(-4) == 2);
+    CHECK(nextPrime(-10) == 2);
 }
 
 //task D
@@ -89,5 +102,36 @@ TEST_CASE("Non-prime to Prime Numbers"){
     CHECK(countPrimes(4,19) == 6);
 }
 
+TEST_CASE("Range Starting from a Negative Number"){
+    CHECK(countPrimes(-5,2) == 1);
+    CHECK(countPrimes(-2,5) == 3);
+    CHECK(countPrimes(-3,17) == 7);
+}
+
+//task E
+TEST_CASE("Non-prime Numbers"){
+    CHECK(isTwinPrime(0) == false);
+    CHECK(isTwinPrime(4) == false);
+    CHECK(isTwinPrime(14) == false);
+}
+
+TEST_CASE("Prime Numbers That Are Not Twin Prime"){
+    CHECK(isTwinPrime(2) == false);
+    CHECK(isTwinPrime(23) == false);
+    CHECK(isTwinPrime(37) == false);
+}
+
+TEST_CASE("Prime Numbers That Are Twin Prime"){
+    CHECK(isTwinPrime(3) == true);
+    CHECK(isTwinPrime(5) == true);
+    CHECK(isTwinPrime(11) == true);
+    CHECK(isTwinPrime(19) == true);
+}
+
+TEST_CASE("Negative Numbers"){
+    CHECK(isTwinPrime(-1) == false);
+    CHECK(isTwinPrime(-5) == false);
+    CHECK(isTwinPrime(-20) == false);
+}
 
 

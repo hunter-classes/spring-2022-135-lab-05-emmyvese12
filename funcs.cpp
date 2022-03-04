@@ -19,7 +19,7 @@ return resultDiv;
 // task B
 
 bool isPrime(int n){
-    // n is NOT a prime number if it IS divisible evenley (==0) by any of the numbers from 2 to n-1
+    // n is NOT a prime number if it IS divisible evenly (==0) by any of the numbers from 2 to n-1
     bool resultPrime;
     int count = 0;
 
@@ -90,6 +90,7 @@ int nextPrime(int n){
 
     return n;
 }
+
 
 // task D
 
@@ -166,6 +167,7 @@ int countPrimes(int a, int b){
     return primeRangeCount;
 }
 
+
 // task E
 bool isTwinPrime(int n){
     //first check if it's a prime number
@@ -197,4 +199,23 @@ bool isTwinPrime(int n){
         result = false;
     }
 return result;
+}
+
+
+// task F
+int nextTwinPrime(int n){
+    bool isitTwinPrime = false;
+
+    do {
+        if (n < 0){ //if n is negative
+            n = 0; //start at 0 b/c all prime nums are positive
+        }
+        n = n + 1;
+
+        isitTwinPrime = isTwinPrime(n);
+
+    }
+    while (isitTwinPrime == false);
+
+    return n;
 }

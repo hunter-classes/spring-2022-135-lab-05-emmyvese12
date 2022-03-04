@@ -54,5 +54,14 @@ int main(){
   std::cout << result3tp;
   std::cout << " == false\n";
 
+  std::cout << "\n============Task F: next twin prime============" << std::endl;
+  std::cout << "nextTwinPrime(0)" << std::endl;
+  int result1ntp = nextTwinPrime(0);
+  std::cout << result1ntp << std::endl;
+  std::cout << "nextTwinPrime(9)" << std::endl;
+  int result2ntp = nextTwinPrime(9);
+  std::cout << result2ntp << std::endl;
+
+
   return 0;
 }

@@ -40,6 +40,19 @@ int main(){
   int result2cp = countPrimes(19,42);
   std::cout << result2cp << std::endl;
 
+  std::cout << "\n============Task E: is a twin prime?============" << std::endl;
+  std::cout << "isTwinPrime(7)" << std::endl;
+  int result1tp = isTwinPrime(7);
+  std::cout << result1tp;
+  std::cout << " == true\n";
+  std::cout << "isTwinPrime(1)" << std::endl;
+  int result2tp = isTwinPrime(1);
+  std::cout << result2tp;
+  std::cout << " == false\n";
+  std::cout << "isTwinPrime(23)" << std::endl;
+  int result3tp = isTwinPrime(23);
+  std::cout << result3tp;
+  std::cout << " == false\n";
 
   return 0;
 }

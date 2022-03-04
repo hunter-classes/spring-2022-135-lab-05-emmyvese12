@@ -2,8 +2,6 @@
 #include "doctest.h"
 #include "funcs.h"
 
-// add your tests here
-
 //task A
 TEST_CASE("0 Divisble by d"){ //can't put 0 as n because it will be undefined
   CHECK(isDivisibleBy(0,10) == true);
@@ -52,7 +50,6 @@ TEST_CASE("Negative Numbers"){
     CHECK(isPrime(-5) == false);
     CHECK(isPrime(-9) == false);
 }
-
 
 //task C
 TEST_CASE("Prime Numbers"){
@@ -161,3 +158,20 @@ TEST_CASE("Non-Prime Numbers"){
 }
 
 //task G
+TEST_CASE("Range Starts With a Non-Prime Number"){
+    CHECK(largestTwinPrime(-5,3) == 3);
+    CHECK(largestTwinPrime(0,1) == -1);
+    CHECK(largestTwinPrime(1,8) == 7);
+}
+
+TEST_CASE("Range Starts With a Prime Number"){
+    CHECK(largestTwinPrime(2,11) == 11);
+    CHECK(largestTwinPrime(23,32) == 31);
+    CHECK(largestTwinPrime(23,27) == -1);
+}
+
+TEST_CASE("Range Starts With a Twin Prime Number"){
+    CHECK(largestTwinPrime(3,29) == 29);
+    CHECK(largestTwinPrime(7,10) == 7);
+    CHECK(largestTwinPrime(13,18) == 17);
+}

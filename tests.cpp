@@ -4,7 +4,7 @@
 
 // add your tests here
 
-// task A
+//task A
 TEST_CASE("0 Divisble by d"){ //can't put 0 as n because it will be undefined
   CHECK(isDivisibleBy(0,10) == true);
   CHECK(isDivisibleBy(0,8) == true);
@@ -118,7 +118,7 @@ TEST_CASE("Non-prime Numbers"){
 TEST_CASE("Prime Numbers That Are Not Twin Prime"){
     CHECK(isTwinPrime(2) == false);
     CHECK(isTwinPrime(23) == false);
-    CHECK(isTwinPrime(37) == false);
+    CHECK(isTwinPrime(30) == false);
 }
 
 TEST_CASE("Prime Numbers That Are Twin Prime"){
@@ -134,4 +134,30 @@ TEST_CASE("Negative Numbers"){
     CHECK(isTwinPrime(-20) == false);
 }
 
+//task F
+TEST_CASE("Negative Numbers"){
+    CHECK(nextTwinPrime(-2) == 3);
+    CHECK(nextTwinPrime(-3) == 3);
+    CHECK(nextTwinPrime(-9) == 3);
+}
 
+TEST_CASE("Prime Numbers That Are Not Twin Prime"){
+    CHECK(nextTwinPrime(2) == 3);
+    CHECK(nextTwinPrime(23) == 29);
+    CHECK(nextTwinPrime(31) == 41);
+}
+
+TEST_CASE("Twin Prime Numbers"){
+    CHECK(nextTwinPrime(3) == 5);
+    CHECK(nextTwinPrime(7) == 11);
+    CHECK(nextTwinPrime(29) == 31);
+}
+
+TEST_CASE("Non-Prime Numbers"){
+    CHECK(nextTwinPrime(0) == 3);
+    CHECK(nextTwinPrime(1) == 3);
+    CHECK(nextTwinPrime(12) == 13);
+    CHECK(nextTwinPrime(18) == 19);
+}
+
+//task G
